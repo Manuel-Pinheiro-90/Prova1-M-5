@@ -1,0 +1,29 @@
+﻿@model IEnumerable<TipoViolazione>
+
+@{
+    ViewData["Title"] = "Violazioni";
+}
+
+<h1> Violazioni disponibili</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Descrizione</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdViolazione</td>
+                <td>@item.Descrizione</td>
+             
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+<a class="nav-link text-dark" asp-area="" asp-controller="TipoViolazione" asp-action="Create">Crea</a>

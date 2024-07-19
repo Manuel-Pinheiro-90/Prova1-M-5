@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Prova1_M_5.Models.VerbaleViewModel>
+
+@{
+    ViewData["Title"] = "Verbali";
+}
+
+<h1>Elenco Verbali</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id Verbale</th>
+            <th>Data Violazione</th>
+            <th>Indirizzo Violazione</th>
+            <th>Nominativo Agente</th>
+            <th>Data Trascrizione Verbale</th>
+            <th>Importo</th>
+            <th>Decurtamento Punti</th>
+            <th>Anagrafica</th>
+            <th>Tipo Violazione</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdVerbale</td>
+                <td>@item.DataViolazione.ToString("dd/MM/yyyy")</td>
+                <td>@item.IndirizzoViolazione</td>
+                <td>@item.Nominativo_Agente</td>
+                <td>@item.DataTrascrizioneVerbale.ToString("dd/MM/yyyy")</td>
+                <td>@item.Importo</td>
+                <td>@item.DecurtamentoPunti</td>
+                <td>
+                    @item.Cognome @item.Nome<br />
+                    @item.Indirizzo, @item.Città<br />
+                    @item.CAP<br />
+                    @item.Cod_Fisc
+                </td>
+                <td>@item.Descrizione</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="nav-link text-dark" asp-area="" asp-controller="Verbale" asp-action="Create">Create</a>

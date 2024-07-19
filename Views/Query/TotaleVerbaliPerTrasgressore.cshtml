@@ -1,0 +1,31 @@
+﻿@model IEnumerable<VerbaliPerTrasgressoreViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1> Tentativo di portare a schermo</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+          
+            <th>Cognome</th>
+            <th>Nome</th>
+            <th>Totale Verbali a carico</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+              
+                <td>@item.Cognome</td>
+                <td>@item.Nome</td>
+                <td>@item.TotaleVerbali</td>
+               
+            </tr>
+        }
+    </tbody>
+</table>

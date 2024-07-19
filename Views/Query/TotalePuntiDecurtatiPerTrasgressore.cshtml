@@ -1,0 +1,31 @@
+﻿@model IEnumerable<PuntiDecurtatiPerTrasgressoreViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1> Totale Punti decurtati</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>Cognome</th>
+            <th>Nome</th>
+            <th> punti decurtati</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.Cognome</td>
+                <td>@item.Nome</td>
+                <td>@item.TotalePuntiDecurtati</td>
+
+            </tr>
+        }
+    </tbody>
+</table>

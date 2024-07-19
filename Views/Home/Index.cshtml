@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Anagrafica>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1> Tentativo di portare a schermo</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Cognome</th>
+            <th>Nome</th>
+            <th>Indirizzo</th>
+            <th>Città</th>
+            <th>CAP</th>
+            <th>Codice Fiscale</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdAnagrafica</td>
+                <td>@item.Cognome</td>
+                <td>@item.Nome</td>
+                <td>@item.Indirizzo</td>
+                <td>@item.Città</td>
+                <td>@item.CAP</td>
+                <td>@item.Cod_Fisc</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="nav-link text-dark" asp-area="" asp-controller="Anagrafica" asp-action="Index">Anagrafica</a>
+<a class="nav-link text-dark" asp-area="" asp-controller="Verbale" asp-action="Index">Verbali</a>
+<a class="nav-link text-dark" asp-area="" asp-controller="TipoViolazione" asp-action="Index">Violazioni</a>
+<a class="nav-link text-dark" asp-area="" asp-controller="Query" asp-action="TotaleVerbaliPerTrasgressore"> TotaleVerbaliPerTrasgressore </a>
+<a class="nav-link text-dark" asp-area="" asp-controller="Query" asp-action="TotalePuntiDecurtatiPerTrasgressore"> TotalePuntiDecurtatiPerTrasgressore </a>
+<a class="nav-link text-dark" asp-area="" asp-controller="Query" asp-action="ViolazioniImportoMaggiore400"> ViolazioneImportoMaggiore400 </a>
+<a class="nav-link text-dark" asp-area="" asp-controller="Query" asp-action="ViolazioniSuperano10Punti"> ViolazioniSuperano10Punti </a>            

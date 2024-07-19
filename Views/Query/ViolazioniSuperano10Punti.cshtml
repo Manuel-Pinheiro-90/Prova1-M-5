@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Prova1_M_5.Models.ViolazioniSuperano10PuntiViewModel>
+
+@{
+    ViewData["Title"] = "Violazioni che Superano 10 Punti";
+}
+
+<h1>Violazioni che Superano 10 Punti</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Importo</th>
+            <th>Cognome</th>
+            <th>Nome</th>
+            <th>Data Violazione</th>
+            <th>Decurtamento Punti</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Importo</td>
+                <td>@item.Cognome</td>
+                <td>@item.Nome</td>
+                <td>@item.DataViolazione.ToString("dd/MM/yyyy")</td>
+                <td>@item.DecurtamentoPunti</td>
+            </tr>
+        }
+    </tbody>
+</table>
