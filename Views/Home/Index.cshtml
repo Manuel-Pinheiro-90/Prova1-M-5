@@ -4,14 +4,14 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1> Benvenuto Agente </h1>
-<p>Il dipartimento si scusa per l'app ma i fondi erano finiti'</p>
+<h1 class="text-center text-light"> Benvenuto Agente </h1>
+<p class="text-center">Il dipartimento si scusa per l'app ma i fondi sono finiti</p>
 
 
-<div class="list-group">
-    
-   <a class="list-group-item list-group-item-action" asp-area="" asp-controller="Query" asp-action="TotaleVerbaliPerTrasgressore">Totale Verbali per Trasgressore</a>
-    <a class="list-group-item list-group-item-action" asp-area="" asp-controller="Query" asp-action="TotalePuntiDecurtatiPerTrasgressore">Totale Punti Decurtati per Trasgressore</a>
-    <a class="list-group-item list-group-item-action" asp-area="" asp-controller="Query" asp-action="ViolazioniImportoMaggiore400">Violazioni con Importo Maggiore di 400 Euro</a>
-    <a class="list-group-item list-group-item-action" asp-area="" asp-controller="Query" asp-action="ViolazioniSuperano10Punti">Violazioni che Superano 10 Punti</a>
+<div class="list-group ">
+
+    <a class="list-group-item list-group-item-action text-center" asp-area="" asp-controller="Query" asp-action="TotaleVerbaliPerTrasgressore">Totale Verbali per Trasgressore</a>
+    <a class="list-group-item list-group-item-action text-center" asp-area="" asp-controller="Query" asp-action="TotalePuntiDecurtatiPerTrasgressore">Totale Punti Decurtati per Trasgressore</a>
+    <a class="list-group-item list-group-item-action text-center" asp-area="" asp-controller="Query" asp-action="ViolazioniImportoMaggiore400">Violazioni con Importo Maggiore di 400 Euro</a>
+    <a class="list-group-item list-group-item-action text-center" asp-area="" asp-controller="Query" asp-action="ViolazioniSuperano10Punti">Violazioni che Superano 10 Punti</a>
 </div>            

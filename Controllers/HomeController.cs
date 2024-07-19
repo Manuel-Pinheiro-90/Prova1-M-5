@@ -8,7 +8,7 @@ namespace Prova1_M_5.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IAnagraficaService _anagraficaService;
+        
 
        
 
