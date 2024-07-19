@@ -12,17 +12,17 @@ namespace Prova1_M_5.Controllers
 
        
 
-        public HomeController(ILogger<HomeController> logger, IAnagraficaService anagraficaService)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _anagraficaService = anagraficaService;
+           
         }
 
         public  IActionResult Index()
         {
-var anagrafiche =  _anagraficaService.GetAll();
 
-            return View(anagrafiche);
+
+            return View();
 
         }
 
@@ -38,15 +38,10 @@ var anagrafiche =  _anagraficaService.GetAll();
             return View();
         }
 
-        // POST: Home/Create
-        [HttpPost]
+      
+        
        
-        public IActionResult Create(Anagrafica anagrafica)
-        {
-            _anagraficaService.Add(anagrafica);
-                return RedirectToAction(nameof(Index));
-            }
-          
+      
 
 
 

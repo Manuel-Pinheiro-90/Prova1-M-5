@@ -4,28 +4,27 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1> Totale Punti decurtati</h1>
+<div class="container mt-4">
+    <h1 class="mb-4 text-center">Totale Punti Decurtati per Trasgressore</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-
-            <th>Cognome</th>
-            <th>Nome</th>
-            <th> punti decurtati</th>
-
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
             <tr>
-
-                <td>@item.Cognome</td>
-                <td>@item.Nome</td>
-                <td>@item.TotalePuntiDecurtati</td>
-
+                <th>Cognome</th>
+                <th>Nome</th>
+                <th>Punti Decurtati</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Cognome</td>
+                    <td>@item.Nome</td>
+                    <td>@item.TotalePuntiDecurtati</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
